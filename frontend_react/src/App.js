@@ -1,10 +1,14 @@
 import './App.css';
+import DisplayDishes from './components/displayDishes';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import Navbar from './components/navbar';
 
 function App() {
   return (
-    <div className='container m-5 p-5'>
-      <h1 className='text-center'>Dish Poll App</h1>
-    </div>
+    <Provider store={store}>
+        <Navbar/>
+    </Provider>
   );
 }
 

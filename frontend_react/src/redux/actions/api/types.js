@@ -1,0 +1,3 @@
+export const RETRIEVE_DISHES = 'RETRIEVE_DISHES';
+
+export const RETRIEVE_DISH_BY_ID = 'RETRIEVE_DISH_BY_ID';
