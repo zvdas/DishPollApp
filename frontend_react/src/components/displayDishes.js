@@ -17,8 +17,35 @@ function DisplayDishes({data}) {
     }
 
     const submitSelection = () => {
-        // topThree.map(i => data.filter(x => x.id === parseInt(i)))
-        console.log(topThree.map(i => data.filter(x => x.id === parseInt(i))));
+        // console.log(topThree.map(i => data.filter(x => x.id === parseInt(i))[0]));
+
+        /*
+        let selected;
+        selected = topThree.map(i => data.filter(x => x.id === parseInt(i))[0]);
+        console.log(selected);
+
+        let ranks = [30, 20, 10];
+        console.log(selected.map((item, index) => ({...item, rank: ranks[index]})));
+        */
+
+        let selectedArray;
+        // create an array of ranks
+        let ranks = [30, 20, 10];
+        selectedArray = 
+        // loop through topThree array with index
+        topThree.map((item, index) => (
+            // filter each element of the data array (from props)
+            // the spread operator ...data will allow ranks to be added to each element of data array
+            { ...data.filter(x => 
+                // where the id of the element of data array is equal to element of topThree array
+                // return the first element, since the filter result will be an array of 1 item
+                x.id === parseInt(item))[0], 
+                // for each element of data array, add each element of the ranks array
+                // eg : for data[0], add ranks[0] or 30, for data[1], add ranks[1] or 20, 
+                rank: ranks[index] 
+            }
+        ));
+        console.log(selectedArray);
     }
 
     let response;
