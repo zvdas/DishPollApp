@@ -70,11 +70,11 @@ function DisplayDishes({data}) {
                 {data.map((dish, index) => 
                     <div className='card-content d-flex m-5 justify-content-around align-items-center' key={index}>
                         <div className='col-4'>
-                            <img src={dish.image} alt={dish.dishName} />
+                            <img src={ dish.image } alt={ dish.dishName } />
                         </div>
 
                         <div className='col-1'>
-                            <input type='checkbox' name={dish.dishName} value={dish.id} onClick={ voteDishes } />
+                            <input type='checkbox' name={ dish.dishName } value={ dish.id } onClick={ voteDishes } />
                         </div>
 
                         <div className='col'>

@@ -7,6 +7,7 @@ import app from '../configurations/firebase-config';
 import { useDispatch } from 'react-redux';
 import { logoutAUser } from '../redux/actions/auth/actions';
 import Home from './home';
+import DisplayDishesOrdered from './displayDishesOrdered';
 
 function Navbar() {
     const [user, setUser] = useState({});
@@ -80,6 +81,7 @@ function Navbar() {
                 <Route exact path='/' element={<Home/>}/>
                 <Route exact path='/auth' element={<Auth/>}/>
                 <Route exact path='/display' element={<DisplayDishes/>}/>
+                <Route exact path='/display-ordered' element={<DisplayDishesOrdered/>}/>
             </Routes>
         </HashRouter>
     )
