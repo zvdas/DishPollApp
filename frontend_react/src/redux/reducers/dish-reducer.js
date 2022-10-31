@@ -7,7 +7,7 @@ export default function DishReducer(state=[], action) {
         case CREATE_DISHES_SELECTION:
             return action.payload;
         case RETRIEVE_ORDERED_DISHES:
-            return [...state, action.payload];
+            return action.payload;
         default:
             return state;
     }

@@ -25,27 +25,6 @@ class DisplayDishesOrdered extends Component {
                                     </tr>
                                 </thead>
                                 
-                                {/**/}
-                                {orderedDishes.reduce((rank, data) => 
-                                    <tbody>
-                                    {data.selectedArray.map(name => 
-                                        <tr>
-                                            <td>
-                                                <img src={ name.image } alt={ name.dishName } />
-                                            </td>
-                                            <td>{(rank[name.dishName] || 0) + parseInt(name.rank)}</td>
-                                            <td>
-                                                <strong>{ name.dishName }</strong>
-                                                <br/>
-                                                { name.description }
-                                            </td>
-                                        </tr>
-                                    )}
-                                    </tbody>
-                                )}
-                                {/**/}
-
-                                {/*
                                 {orderedDishes.map((dish, index) => 
                                     <tbody>
                                         {dish.selectedArray.map(selected => 
@@ -63,7 +42,6 @@ class DisplayDishesOrdered extends Component {
                                         )}
                                     </tbody>
                                 )}
-                                */}
                             </table>
                         </div>
                 </div>
