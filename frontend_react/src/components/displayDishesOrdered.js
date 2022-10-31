@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { retrieveAllOrderedDishes } from '../redux/actions/firestore/actions';
 
 class DisplayDishesOrdered extends Component {
-
     render() {
         let orderedDishes = this.props.data;
 
@@ -14,7 +13,7 @@ class DisplayDishesOrdered extends Component {
         (
             <div className='card m-5'>
                 <h2 className='card-header text-center'>Dish Ranking</h2>
-                <div className='card-body'>
+                <div className='card-body' style={{ maxHeight: 300, overflow: 'auto' }}>
                         <div className='card-content d-flex m-5 justify-content-around align-items-center'>
                             <table className='table'>
                                 <thead>

@@ -4,7 +4,6 @@ import { connect, useDispatch } from 'react-redux';
 import app from '../configurations/firebase-config';
 import { retrieveDishes, createNewDishesSelection } from '../redux/actions/firestore/actions';
 
-
 function DisplayDishes({data}) {
 
     const [topThreeId, setTopThreeId] = useState([]);
@@ -52,9 +51,6 @@ function DisplayDishes({data}) {
                 rank: ranks[index] 
             }
         ));
-        // console.log(selectedArray);
-        // console.log(user.email);
-        // console.log(user.uid);
         dispatch(createNewDishesSelection({"user_email": user.email, "user_id": user.uid, selectedArray}));
     }
 

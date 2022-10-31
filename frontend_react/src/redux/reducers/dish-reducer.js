@@ -4,10 +4,12 @@ export default function DishReducer(state=[], action) {
     switch (action.type) {
         case RETRIEVE_DISHES:
             return action.payload;
+            // return [...state, action.payload];
         case CREATE_DISHES_SELECTION:
             return action.payload;
         case RETRIEVE_ORDERED_DISHES:
             return action.payload;
+            // return [...state, action.payload];
         default:
             return state;
     }
