@@ -64,6 +64,12 @@ function Navbar() {
 
                     <ul className='navbar-nav ms-auto mb-2 mb-lg-0 mx-5'>
                         <li className='nav-item mx-5'>
+                            <button className='nav-link btn btn-outline' data-bs-toggle='tab'>
+                                <Link to={'/auth'} className='text-primary text-decoration-none'>Login</Link>
+                            </button>
+                        </li>
+
+                        <li className='nav-item mx-5'>
                             <div className='nav-link text-primary'>{user?.email}</div>
                         </li>
 
